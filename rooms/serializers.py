@@ -13,6 +13,3 @@ class RoomDetailSerializer(serializers.ModelSerializer):
         model = Room
         fields = ['id', 'name', 'type', 'capacity']
 
-
-class RoomAvailabilitySerializer(serializers.ModelSerializer):
-    pass

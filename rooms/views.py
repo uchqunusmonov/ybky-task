@@ -22,6 +22,3 @@ class RoomDetailView(APIView):
             )
         serializer = serializers.RoomDetailSerializer(room)
         return Response(serializer.data)
-
-
-
