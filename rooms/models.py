@@ -21,11 +21,11 @@ class Room(models.Model):
 
 class Availability(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    start_time = models.DateTimeField(blank=True, null=True)
-    end_time = models.DateTimeField(blank=True, null=True)
+    start = models.DateTimeField(blank=True, null=True)
+    end = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.start_time} || {self.end_time}"
+        return f"{self.start} || {self.end}"
 
     class Meta:
         verbose_name = 'Availability'

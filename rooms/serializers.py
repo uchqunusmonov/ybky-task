@@ -2,14 +2,19 @@ from rest_framework import serializers
 from .models import Resident, Availability, Room
 
 
-class RoomListSerializer(serializers.ModelSerializer):
+class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
         fields = ['id', 'name', 'type', 'capacity']
 
 
-class RoomDetailSerializer(serializers.ModelSerializer):
+class AvailabilitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Room
-        fields = ['id', 'name', 'type', 'capacity']
+        model = Availability
+        fields = ['start', 'end']
 
+
+class ResidentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Resident
+        fields = ['name', ]
